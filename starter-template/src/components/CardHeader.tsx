@@ -10,9 +10,9 @@ const CardHeader = ({ title, description }: Props) => {
     <div className="">
       <div className="inline-flex items-center gap-4 font-semibold tracking-wide">
         <StarIcon className="text-emerald-300" />
-        <h3 className="font-serif text-xl">{title}</h3>
+        <h3 className="font-serif text-xl lg:text-3xl">{title}</h3>
       </div>
-      <p className="text-white/70 text-sm py-5">{description}</p>
+      <p className="text-white/70 text-sm lg:text-lg py-5">{description}</p>
     </div>
   );
 };

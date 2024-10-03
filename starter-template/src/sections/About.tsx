@@ -17,24 +17,26 @@ const About = () => {
           title="a glimpse into my world"
           description="Learn more about who I am. what I do, and what inspires me"
         />
-        <Card className="h-[320px]">
-          <CardHeader
-            title={"My Reads"}
-            description={"Explore the books shaping my perspectives"}
-          />
-          <div className="w-40 mx-auto">
-            <Image src={AtomixHabitImage} alt="atomic habit cover pic" />
-          </div>
-        </Card>
-        <Card className="">
-          <CardHeader
-            title={"My Toolbox"}
-            description={
-              "Explore the technologies and tools I use to craft digital experiences"
-            }
-          />
-          <ToolBoxItems toolboxItems={toolboxItems} />
-        </Card>
+        <div className="md:grid md:grid-cols-2 md:gap-5">
+          <Card className="">
+            <CardHeader
+              title={"My Reads"}
+              description={"Explore the books shaping my perspectives"}
+            />
+            <div className="w-40 mx-auto">
+              <Image src={AtomixHabitImage} alt="atomic habit cover pic" />
+            </div>
+          </Card>
+          <Card className="">
+            <CardHeader
+              title={"My Toolbox"}
+              description={
+                "Explore the technologies and tools I use to craft digital experiences"
+              }
+            />
+            <ToolBoxItems toolboxItems={toolboxItems} />
+          </Card>
+        </div>
         <Card>
           <CardHeader
             title={"Beyond the code"}
@@ -43,7 +45,7 @@ const About = () => {
             }
           />
           <div className="">
-            <div className="grid grid-cols-3 gap-2">
+            <div className="grid grid-cols-3 lg:grid-cols-4 gap-2">
               {hobbies.map((hobby) => (
                 <div
                   key={hobby.title}

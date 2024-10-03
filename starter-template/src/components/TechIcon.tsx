@@ -6,7 +6,7 @@ interface Props {
 }
 
 const TechIcon = ({ component: Component, className = "" }: Props) => {
-  return <Component className={`size-10  ${className}`} />;
+  return <Component className={`size-10 md:size-12  ${className}`} />;
 };
 
 export default TechIcon;
