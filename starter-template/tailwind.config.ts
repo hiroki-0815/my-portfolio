@@ -24,6 +24,17 @@ const config: Config = {
       fontFamily:{
         sans: 'var(--font-sans)',
         serif: 'var(--font-serif)'
+      },
+      animation:{
+        'ping-large':'ping 1s ease-in-out infinite'
+      },
+      keyframes:{
+        'ping-large':{
+          '75%,100%':{
+            transform: 'scale(4)',
+            opacity: '0'
+          }
+        }
       }
     },
   },
