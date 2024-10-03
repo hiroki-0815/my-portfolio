@@ -104,7 +104,7 @@ const ProjectsSection = () => {
               <Image
                 src={project.image}
                 alt={project.title}
-                className="mb-4 lg:absolute lg:h-full overflow-hidden"
+                className="mb-4 lg:absolute lg:h-full overflow-hidden object-cover"
               />
             </div>
           </div>

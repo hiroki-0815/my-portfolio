@@ -2,11 +2,11 @@ import React from "react";
 
 interface Props {
   component: React.ElementType;
+  className?: string;
 }
 
-const TechIcon = ({ component }: Props) => {
-  const Component = component;
-  return <Component className="size-10" />;
+const TechIcon = ({ component: Component, className = "" }: Props) => {
+  return <Component className={`size-10  ${className}`} />;
 };
 
 export default TechIcon;
