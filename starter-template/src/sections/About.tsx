@@ -45,13 +45,13 @@ const About = () => {
             }
           />
           <div className="">
-            <div className="grid grid-cols-3 lg:grid-cols-4 gap-2">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
               {hobbies.map((hobby) => (
                 <div
                   key={hobby.title}
                   className="flex justify-around gap-2 px-6 rounded-full text-black font-semibold bg-gradient-to-r from-emerald-300 to-sky-400 py-1.5 max-w-[180px]"
                 >
-                  <span>{hobby.title} </span>
+                  <span className="text-sm">{hobby.title} </span>
                   <span>{hobby.emoji}</span>
                 </div>
               ))}
