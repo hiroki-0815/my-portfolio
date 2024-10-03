@@ -4,6 +4,7 @@ import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
 import Image from "next/image";
 import CheckIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpIcon from "@/assets/icons/arrow-up-right.svg";
+import Card from "@/components/Card";
 
 const portfolioProjects = [
   {
@@ -64,12 +65,15 @@ const ProjectsSection = () => {
           See how I transformed concepts into engaging digital experiences.
         </p>
       </div>
-      {portfolioProjects.map((project) => (
-        <div
-          className=" p-6 flex flex-col mt-10 bg-gray-800 rounded-3xl relative z-0 overflow-hidden 
-            after:-z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline 
-            after:-outline-offset-2 after:rounded-3xl after:outline-white/20 lg:px-16 lg:py-14"
+      {portfolioProjects.map((project, projectIndex) => (
+        <Card
           key={project.title}
+          className=" p-6 flex flex-col mt-10 bg-gray-800 rounded-3xl z-0 overflow-hidden 
+            after:-z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline 
+            after:-outline-offset-2 after:rounded-3xl after:outline-white/20 lg:px-16 lg:py-14 sticky"
+          style={{
+            top: `calc(64px + ${projectIndex * 40}px`,
+          }}
         >
           <div className="lg:grid lg:grid-cols-2 gap-16">
             <div className="">
@@ -108,7 +112,7 @@ const ProjectsSection = () => {
               />
             </div>
           </div>
-        </div>
+        </Card>
       ))}
     </section>
   );
