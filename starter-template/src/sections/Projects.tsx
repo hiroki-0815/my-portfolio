@@ -47,7 +47,7 @@ const portfolioProjects = [
 
 const ProjectsSection = () => {
   return (
-    <section className="flex flex-col pb-16 lg:py-24">
+    <section className="flex flex-col pb-16 lg:py-24" id="projects">
       <div className="flex flex-col items-center">
         <div className="flex ">
           <p

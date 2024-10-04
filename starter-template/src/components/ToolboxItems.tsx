@@ -9,12 +9,12 @@ interface ToolboxItem {
 
 interface ToolboxItemsProps {
   toolboxItems: ToolboxItem[];
-  className?: string; // Optional className for the container
+  className?: string;
 }
 
 const ToolBoxItems = ({ toolboxItems, className = "" }: ToolboxItemsProps) => {
   return (
-    <div className={`grid grid-cols-2 gap-4 max-w-[400px]  ${className}`}>
+    <div className={`grid grid-cols-2 gap-4 max-w-[400px] ${className}`}>
       {toolboxItems.map((item) => (
         <div
           key={item.title}
