@@ -57,7 +57,7 @@ const About = () => {
                     text-black font-semibold bg-gradient-to-r from-emerald-300 to-sky-400 py-1.5 max-w-[180px] items-center"
                   >
                     <span className="text-[12px] md:text-lg">
-                      {hobby.title}{" "}
+                      {hobby.title}
                     </span>
                     <span>{hobby.emoji}</span>
                   </div>

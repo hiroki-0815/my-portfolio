@@ -1,3 +1,5 @@
+"use client";
+
 import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
 import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
 import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
@@ -67,10 +69,10 @@ const ProjectsSection = () => {
       </div>
       {portfolioProjects.map((project, projectIndex) => (
         <Card
-          key={project.title}
-          className=" p-6 flex flex-col mt-10 bg-gray-800 rounded-3xl z-0 overflow-hidden 
-            after:-z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline 
-            after:-outline-offset-2 after:rounded-3xl after:outline-white/20 lg:px-16 lg:py-14 sticky"
+          key={projectIndex} // or use project.title if it's guaranteed to be unique
+          className="p-6 flex flex-col mt-10 bg-gray-800 rounded-3xl z-0 overflow-hidden 
+      after:-z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline 
+      after:-outline-offset-2 after:rounded-3xl after:outline-white/20 lg:px-16 lg:py-14 sticky"
           style={{
             top: `calc(64px + ${projectIndex * 40}px`,
           }}
@@ -79,30 +81,31 @@ const ProjectsSection = () => {
             <div className="">
               <div
                 className="bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text
-             font-semibold tracking-wide text-sm uppercase inline-flex gap-1 lg:mt-12"
+           font-semibold tracking-wide text-sm uppercase inline-flex gap-1 lg:mt-12"
               >
                 <span>{project.company}</span>
                 <span>&bull; </span>
-                <span> {project.year}</span>
+                <span>{project.year}</span>
               </div>
               <h3 className="font-serif text-2xl md:text-4xl mt-2 lg:mt-5 font-semibold tracking-widest">
                 {project.title}
               </h3>
               <hr className="border-t-2 my-4 lg:my-6 border-white/5" />
               <ul className="flex flex-col gap-4 lg:gap-6 mb-1">
-                {project.results.map((result) => (
-                  <li className="flex flex-row gap-2 items-center text-sm md:text-base lg:text-lg text-white/50 ">
+                {project.results.map((result, resultIndex) => (
+                  <li
+                    key={resultIndex}
+                    className="flex flex-row gap-2 items-center text-sm md:text-base lg:text-lg text-white/50"
+                  >
                     <CheckIcon className="size-5" />
                     <span className="text-sm ">{result.title} </span>
                   </li>
                 ))}
               </ul>
-              <a href={project.link}>
-                <button className="bg-white text-gray-950 h-12 w-auto px-6 rounded-md font-semibold inline-flex items-center justify-center my-6">
-                  <span>View Live Site</span>
-                  <ArrowUpIcon className="size-4" />
-                </button>
-              </a>
+              <button className="bg-white text-gray-950 h-12 w-auto px-6 rounded-md font-semibold inline-flex items-center justify-center my-6">
+                <span>View Live Site</span>
+                <ArrowUpIcon className="size-4" />
+              </button>
             </div>
             <div>
               <Image

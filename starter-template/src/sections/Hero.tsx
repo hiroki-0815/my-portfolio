@@ -1,6 +1,7 @@
+"use client";
+
 import memojiImage from "@/assets/images/memoji-computer.png";
 import Image from "next/image";
-import ArrowDown from "@/assets/icons/arrow-down.svg";
 import grainImage from "@/assets/images/grain.jpg";
 import HeroOrbit from "@/components/HeroOrbit";
 import StarIcon from "@/assets/icons/star.svg";
@@ -146,12 +147,6 @@ export const HeroSection = () => {
             I specialize in transforming designs into functional,
             high-performing web applications. Let's discuss your next project.
           </p>
-        </div>
-        <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-          <button className="inline-flex items-center gap-2 border border-white/15 py-1.5 px-6 h-12 rounded-xl">
-            <span className="font-semibold">Explore My Work</span>
-            <ArrowDown className="size-4" />
-          </button>
         </div>
       </div>
     </div>

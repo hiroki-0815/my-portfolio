@@ -10,7 +10,7 @@ export const Header: React.FC = () => {
     setActiveLink(id);
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -18,7 +18,7 @@ export const Header: React.FC = () => {
     <div className="flex justify-center items-center fixed z-10 top-3 w-full">
       <nav className="flex gap-1 p-0.5 border border-white/15 rounded-full bg-white/10 backdrop-blur">
         <Link
-          href="#home"
+          href="#home" // Ensure this ID exists in your sections
           className={`nav-item ${
             activeLink === "Home" ? "bg-white text-gray-900" : ""
           }`}
@@ -27,7 +27,7 @@ export const Header: React.FC = () => {
           Home
         </Link>
         <Link
-          href="#projects"
+          href="#projects" // Ensure this ID exists in your sections
           className={`nav-item ${
             activeLink === "Projects" ? "bg-white text-gray-900" : ""
           }`}
@@ -36,7 +36,7 @@ export const Header: React.FC = () => {
           Projects
         </Link>
         <Link
-          href="#about"
+          href="#about" // Ensure this ID exists in your sections
           className={`nav-item ${
             activeLink === "About" ? "bg-white text-gray-900" : ""
           }`}
